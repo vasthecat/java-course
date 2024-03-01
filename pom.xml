@@ -50,6 +50,32 @@
               <phase>package</phase>
               <goals><goal>jar</goal></goals>
             </execution>
+            <execution>
+              <id>Calc</id>
+              <configuration>
+                <archive>
+                  <manifest>
+                    <mainClass>ru.sgu.Calc</mainClass>
+                  </manifest>
+                </archive>
+                <classifier>calc</classifier>
+              </configuration>
+              <phase>package</phase>
+              <goals><goal>jar</goal></goals>
+            </execution>
+            <execution>
+              <id>Input</id>
+              <configuration>
+                <archive>
+                  <manifest>
+                    <mainClass>ru.sgu.Input</mainClass>
+                  </manifest>
+                </archive>
+                <classifier>input</classifier>
+              </configuration>
+              <phase>package</phase>
+              <goals><goal>jar</goal></goals>
+            </execution>
           </executions>
         </plugin>
       </plugins>
