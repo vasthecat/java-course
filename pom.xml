@@ -38,14 +38,27 @@
           <artifactId>maven-jar-plugin</artifactId>
           <executions>
             <execution>
-              <id>Hello</id>
+              <id>Stonks</id>
               <configuration>
                 <archive>
                   <manifest>
-                    <mainClass>ru.sgu.Hello</mainClass>
+                    <mainClass>ru.sgu.Stonks</mainClass>
                   </manifest>
                 </archive>
-                <classifier>hello</classifier>
+                <classifier>stonks</classifier>
+              </configuration>
+              <phase>package</phase>
+              <goals><goal>jar</goal></goals>
+            </execution>
+            <execution>
+              <id>Archiver</id>
+              <configuration>
+                <archive>
+                  <manifest>
+                    <mainClass>ru.sgu.Archiver</mainClass>
+                  </manifest>
+                </archive>
+                <classifier>archiver</classifier>
               </configuration>
               <phase>package</phase>
               <goals><goal>jar</goal></goals>

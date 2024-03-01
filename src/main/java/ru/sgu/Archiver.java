@@ -1,6 +1,6 @@
 package ru.sgu;
 
-public class Hello
+public class Archiver
 {
     public static void main(String[] args)
     {
