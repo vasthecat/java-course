@@ -45,5 +45,6 @@ public class Calc
                 System.out.println(e.getMessage());
             }
         }
+        input.close();
     }
 }
