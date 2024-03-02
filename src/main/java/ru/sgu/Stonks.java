@@ -35,11 +35,11 @@ class DataRow {
         }
         DataRow row = (DataRow) o;
         return row != null
-            && row.surname == this.surname
-            && row.name == this.name
-            && row.paternal == this.paternal
-            && row.company == this.company
-            && row.rating == this.rating;
+            && row.surname.equals(this.surname)
+            && row.name.equals(this.name)
+            && row.paternal.equals(this.paternal)
+            && row.company.equals(this.company)
+            && row.rating.equals(this.rating);
     }
 
     @Override
