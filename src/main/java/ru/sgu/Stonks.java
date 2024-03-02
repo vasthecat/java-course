@@ -69,6 +69,7 @@ public class Stonks
             DataRow row = new DataRow(ops[0], ops[1], ops[2], ops[3], rating);
             set.add(row);
         }
+        input.close();
 
         var data = new ArrayList<DataRow>(set);
         data.sort((r1, r2) -> r2.rating.compareTo(r1.rating));

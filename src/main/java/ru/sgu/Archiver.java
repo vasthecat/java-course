@@ -38,6 +38,7 @@ public class Archiver
     {
         Scanner input = new Scanner(System.in);
         String line = input.nextLine();
+        input.close();
         String[] ops = line.split("\\s+");
         if (ops.length < 2) {
             System.out.println("Wrong number of arguments.");
