@@ -45,7 +45,7 @@
                     <mainClass>ru.sgu.Hello</mainClass>
                   </manifest>
                 </archive>
-                <finalName>hello</finalName>
+                <classifier>hello</classifier>
               </configuration>
               <phase>package</phase>
               <goals><goal>jar</goal></goals>
