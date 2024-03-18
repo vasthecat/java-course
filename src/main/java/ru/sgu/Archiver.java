@@ -3,6 +3,7 @@ package ru.sgu;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.stream.Collectors;
 import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.io.File;
@@ -47,13 +48,11 @@ public class Archiver
         String dirpath = ops[0], substr = ops[1].toLowerCase();
         var dirfile = new File(dirpath);
 
-        var files = getPaths(dirfile);
-        var filtered = new ArrayList<String>();
-        for (String path : files) {
-            if (path.toLowerCase().contains(substr)) {
-                filtered.add(path);
-            }
-        }
+        var filtered =
+            getPaths(dirfile)
+            .stream()
+            .filter((path) -> path.toLowerCase().contains(substr))
+            .collect(Collectors.toList());
 
         try {
             var fos = new FileOutputStream(dirfile.getName() + ".zip");
